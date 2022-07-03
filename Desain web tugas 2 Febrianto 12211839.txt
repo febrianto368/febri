@@ -1,0 +1,237 @@
+# layout_web
+Studi kasus membuat halaman responsive
+
+Tugas individu :
+Buat halaman layout berikut ini menjadi desain responsive, lalu uji dengan emulator.
+Pastikan semua element layout web tampil sempurna pada semua resolusi yang ada pada
+emulator yang anda gunakan.
+<!DOCTYPE HTML>
+<HTML>
+ <head>
+ <title>Latihan Markup</title>
+ <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+ <div id="wrapper">
+	 <div id="header">
+		 <img src="images/logo.png" alt="logo" />
+			 <ul id="menu-utama">
+				 <li><a href="index.html">Home</a></li>
+				 <li><a href="service.html">Service</a></li>
+				 <li><a href="about.html">About Us</a></li>
+				 <li><a href="contactus.html">Contact Us</a></li>
+			 </ul>
+		 <form>
+		 <input type="text" name="search" />
+		 </form>
+	 </div><!-- Penutup div "header" -->
+	<div id="daftar-artikel">
+		 <div class="artikel">			 
+			 <h1> Tentang Kami </h1>
+			 <b>Feb 12, 2007</b><b>Views : 3,487,497</b>
+			 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, 
+imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. 
+Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
+porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, 
+feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. 
+Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. 
+Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem 
+neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio 
+et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. 
+Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p>			
+		 </div><!-- Penutup div "artikel" -->
+
+
+	</div><!-- Penutup div "daftar-artikel" -->
+	<div id="sidebar">
+		<h2>Who we are?</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+			Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+			Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
+		</p>
+		<h2>Artikel berdasarkan kategori</h2>
+		 <ul>
+			 <li><a href="">HTML dan CSS</a></li>
+			 <li><a href="">Javascript</a></li>
+			 <li><a href="">Photoshop</a></li>
+			 <li><a href="">Inspirasi</a></li>
+			 <li><a href="">Berita</a></li>
+			 <li><a href="">Off Topic</a></li>
+		 </ul>
+	</div><!-- Penutup div "sidebar" -->
+	<div id="footer">
+		<p>Desain Web copyright 2017 by Wahyu W</p>
+	</div>
+ </div><!-- Penutup div "wrapper" -->
+ </body>
+</html>
+/* atur ulang margin dan padding agar tidak 
+menggunakan style bawaan dari browser  */
+*{
+	margin:0;
+	padding:0;
+	font-family:calibri, ‚segoe ui, arial, tahoma, sans-serif;
+}
+/* background dari desain web berwarna abu-abu */
+body{
+	background-color:#DDDDDD;
+}
+
+#wrapper{
+	width : 90%;
+	margin: 0 auto; /* auto menyebabkan rata tengah */
+	overflow: hidden; /* krn element child ada yg 
+						make floating */
+}
+
+#header{
+	background: url(images/header.jpg) repeat-x #555;
+	height : 70px;	
+	padding:5px;
+	margin : 20px 0;
+	overflow : hidden;
+	border-radius: 10px;	
+}
+#header img{ margin-left:20px; width:40px; }
+
+#menu-utama{
+	margin-top:3px;
+	list-style:none;
+}
+
+#menu-utama li{
+	float:left;
+	padding:8px 20px;
+	border-right:1px solid #555555;
+}
+
+#menu-utama li a{
+	color : #ffffff;
+	text-decoration:none;
+}
+
+#header form{
+	float:right;
+	margin-top:-10px;
+	margin-right: 10px;
+}
+
+.txtsearch{
+	border:none;
+	height:20px;
+}
+
+#daftar-artikel{
+	width:470px;
+	float:left;
+}
+.artikel{
+	background:#ffffff;
+	padding:10px;
+	margin-bottom:20px;
+	overflow:hidden;
+}
+.artikel img{
+	float:left;
+	margin-right:10px;
+	width:200px;
+	height:165px
+}
+
+.artikel b{
+	color:#616060;
+	background:#DDDDDD;
+	padding:3px;
+	font-size:12px;
+	font-weight:bold;
+	margin-right:10px;
+}
+
+.artikel p{
+	margin:10px 0;
+}
+
+.artikel a{
+	display:block;
+	text-align:right;
+	color:#636363;
+}
+
+#sidebar{
+	width:270px;
+	float:right;
+}
+
+#sidebar h2{
+	font-size:18px;
+	margin:10px 0;
+}
+
+#sidebar p{
+	line-height:20px;
+	color : #636363;
+}
+
+#sidebar ul li a{
+	color:#636363;
+	text-decoration:none;
+}
+
+#sidebar ul {
+	margin-left : 25px;
+}
+
+#footer{
+	clear:both;
+	margin:20px 0;
+	text-align:center;
+	background-color: #f0f0f0;
+	padding:5px;
+	color:#555555;
+}
+
+.form_contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#myform {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.full-width {
+    grid-column: 1 / 2;   
+}
+
+#myform label {
+  display: block;
+}
+
+.form_contact p {
+  margin: 0;
+}
+
+#myform button,input, textarea {
+  padding: 0.5em;
+}
+
+button {
+  background: lightgrey;
+  width: 100%;
+  border: 0;
+}
+
+button:hover, button:focus {
+  background: gold;
+  outline: 0;
+}
+
+.form_contact input:focus,textarea:focus {
+  outline: 3px solid gold;
+}
